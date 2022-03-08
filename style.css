@@ -1,0 +1,17 @@
+
+        img{
+            width: 35%;
+            align-items: center;
+            margin-left: 100px;
+            margin-top: 70px;
+            border-radius: 50%;
+            -webkit-border-radius: 200px;
+            -moz-border-radius: 200px;
+            
+        }
+        #petik1{
+            padding-top: 20px;
+        }
+        #petik2{
+            margin-left: 270px;
+        }

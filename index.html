@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gimana2?</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script></head>
+</head>
+<body>
+    <script type="text/javascript">
+        var nama = prompt("Masukan Nama");
+        Swal.fire({
+          title: 'Halo, ' + nama + '❤️',
+          text: "Halo, Mbak " + nama + " Cantik, Kamu Mau Nggak Jadi Cewek Saya",
+          imageUrl: 'gb.jpg',
+          imageWidth: 150,
+          imageheight: 50,
+          imageAlt: "Cuma Gambar Aja",
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Iyaa❤️',
+          cancelButtonText: 'Nggak!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'I Love You Mbak ' + nama + '❤️',
+              'Terima kasih Mbak ' + nama + ' Cantik,Sudah menerima saya',
+              'success',
+            )
+          }
+        });
+    </script>
+    <div class="container" id="particles-js">
+        <div class="container">
+            <img src="gb.jpg" alt="Ini Adalah Gambar"/>
+            <p class="text-center">
+                Halo, 
+                <script>
+                    document.write(nama);
+                </script>♥ Cantik!
+            </p>
+        </div>
+        <div>
+            <h1 id="isi"></h1>
+        </div>
+        <div class="container-fluid">
+            <div class="container container-fluid bg-light mb-3 typewriter">
+            <h3 id="petik1">❝</h3>
+           <div id="typed-strings">
+                    <p>Senyum saja. Tidak perlu banyak marah-marah. Nanti cepat tua. Daripada tua sendiri, lebih baik tua berdua bareng saya</p>
+                </div>
+                <span id="typed"></span>
+            <h3 class="mt-3" id="petik2">❞</h3>
+                <div class="author">
+                    <p>from me too,
+                        <span class="text-danger">
+                            <script>
+                                document.writeln(nama);
+                            </script>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="form">
+                    <button type="submit" class="btn btn-danger" onclick="klik2" id="dont">Don't Klik</button>
+                    <span class="btn btn-warning" onclick="info()" id="info">
+                        Cuma Info
+                    </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 45,
+                loop: false
+            }
+        );
+    $(document).ready ( function () {
+        $("#info").click(function () {
+           Swal.fire(
+               "I'M Hidhz",
+               "<p>Dibuat Menggunakan <strong><span class='text-warning'>Javascript</span> & <span class='text-danger'>Php</span></strong>,Eitss Walaupun dibuat Menggunakan <span class='text-danger'><strong>Php</strong></span> Tapi <i><strong>Aku serius</sttong> Ngga <span class='text-primary'>Php</span> in kamu kok.</i></p>"
+           )
+        });
+        $("#dont").click(function(){
+            Swal.fire(
+                    "I ❤️ U Mbak " + nama,
+                    '"I believe in fate that you will be my soul mate."'
+                ).then((result) => {
+                    if(result.isConfirmed){
+                        location.href = "https://api.whatsapp.com/send?phone=6281216935644&text=I%20Love%20u%20Too";
+                    }
+                })
+        });
+    });
+    </script>
+</body>
+</html>
